@@ -1,14 +1,22 @@
-Attribute VB_Name = "Módulo1"
+Attribute VB_Name = "Mï¿½dulo1"
 
 '1.CONDICIONALES If, ElseIf y Else
 
 Public Sub If_Statements()
-    ' Definiendo mis variables
+
+    ' 1. Definiendo mis variables: creo la variable celda para acceder al valor (.Value)
+    ' de la celda activa (ActiveCell)
+
     celda = ActiveCell.Value
-    ' Verificando las condiciones
-    If celda >= 70 Then
-        MsgBox ("Eres mayor de 70.")
-    ElseIf celda < 70 And celda >= 21 Then
+
+    ' 2. Verificando las condiciones:
+    ' - valor de la celda >= 70 --> Muestra "Eres mayor de 70."
+    ' - 60 > valor de la celda >= 21 --> Muestra "Eres mayor de 21."
+    ' - De otro modo (cualquier otro caso) --> Muestra "Eres menor de edad."
+
+    If celda >= 60 Then
+        MsgBox ("Eres mayor de 60.")
+    ElseIf celda < 60 And celda >= 21 Then
         MsgBox ("Eres mayor de 21.")
     Else
         MsgBox ("Eres menor de edad.")
@@ -19,7 +27,10 @@ End Sub
 '2. CONDICIONALES Select Case Is y Else
 
 Public Sub Select_Case_Statements()
-    'Definiendo los casos
+
+    'Definiendo los casos: Establesco los casos para el valor 
+    ' de la variable (ActiveCell.Value) y que sucede en cada uno.
+
     Select Case ActiveCell.Value
         Case Is > 70
             MsgBox ("Mayor de 70")
@@ -41,7 +52,7 @@ Public Sub Do_While_Loops()
     Do While ActiveCell.Value <> "" 'i <= 10
         'Activando las sentencias condicionales
         If_Statements
-        'Moviéndome por la columna.
+        'Moviï¿½ndome por la columna.
         ActiveCell.Offset(1, 0).Select
         'i = i + 1
     Loop
@@ -58,7 +69,7 @@ Public Sub For_Each_Loops()
     For Each user In Selection
         'Activando las sentencias condicionales
         If_Statements
-        'Moviéndome por la columna.
+        'Moviï¿½ndome por la columna.
         ActiveCell.Offset(1, 0).Select
     Next user
     
@@ -75,7 +86,7 @@ Public Sub For_Next_Loop()
     For i = 1 To ActiveSheet.UsedRange.Rows.Count - 1
         'Activando las sentencias condicionales
         If_Statements
-        'Moviéndome por la columna.
+        'Moviï¿½ndome por la columna.
         ActiveCell.Offset(1, 0).Select
     Next i
     
