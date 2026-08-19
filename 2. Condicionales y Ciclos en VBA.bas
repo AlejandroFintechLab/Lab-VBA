@@ -84,7 +84,7 @@ Public Sub Do_While_Loops_b()
     'Estableciendo el ciclo
     Do While ActiveCell.Value <> "" 
     'La sentencia indica que el código del ciclo se ejecutará
-    ' mientras el valor de la celda vacía sea algo distinto a un valor vacío ("")
+    ' mientras el valor de la celda activa sea algo distinto a un valor vacío ("")
 
         'Activando las sentencias condicionales
         If_Statements
